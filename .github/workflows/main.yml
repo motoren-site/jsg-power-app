@@ -37,3 +37,6 @@ jobs:
   
     - name: Deploy Service
       run: kubectl apply -f config/service.yml
+      
+    - name: Deploy Ingress
+      run: kubectl apply -f config/ingress.yml
