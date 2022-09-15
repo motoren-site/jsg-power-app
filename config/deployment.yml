@@ -1,0 +1,26 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: jsg-power-app
+  namespace: apps
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      k8s-app: jsg-power-app
+  template:
+    metadata:
+      name: jsg-power-app
+      labels:
+        k8s-app: jsg-power-app
+    spec:
+      containers:
+        - name: jsg-power-app
+          image: .
+          imagePullPolicy: Always
+      restartPolicy: Always
+      terminationGracePeriodSeconds: 30
+      dnsPolicy: ClusterFirst
+  strategy:
+    type: RollingUpdate
+  minReadySeconds: 5
