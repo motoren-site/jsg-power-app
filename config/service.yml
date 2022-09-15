@@ -8,7 +8,7 @@ metadata:
 spec:
   ports:
   - port: 80
-    targetPort: 5000
+    targetPort: 3000
     protocol: TCP
   selector:
     k8s-app: jsg-power-app
