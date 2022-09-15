@@ -9,6 +9,6 @@ COPY *.go ./
 
 RUN go build -o /jsg-power-app
 
-EXPOSE 5000
+EXPOSE 3000
 
 CMD [ "/jsg-power-app" ]
