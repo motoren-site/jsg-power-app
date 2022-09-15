@@ -1,0 +1,16 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: jsg-power-app
+  namespace: apps
+  labels:
+    k8s-app: jsg-power-app
+spec:
+  ports:
+  - port: 80
+    targetPort: 8000
+    protocol: TCP
+  selector:
+    k8s-app: jsg-power-app
+  type: ClusterIP
+  ipFamilyPolicy: SingleStack
