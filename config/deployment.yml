@@ -3,6 +3,8 @@ apiVersion: apps/v1
 metadata:
   name: jsg-power-app
   namespace: apps
+  labels:
+    k8s-app: jsg-power-app
 spec:
   replicas: 2
   selector:
