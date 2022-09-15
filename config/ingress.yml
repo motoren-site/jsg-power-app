@@ -12,7 +12,7 @@ spec:
     http:
       paths:
       - pathType: Prefix
-        path: "/jsg(/|$)(.*)"
+        path: "/jsg"
         backend:
           service:
             name: jsg-power-app
