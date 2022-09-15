@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: jsg-power-app
-          image: registry.digitalocean.com/olsen/jsg-power-app
+          image: <IMAGE>
           imagePullPolicy: Always
       restartPolicy: Always
       terminationGracePeriodSeconds: 30
