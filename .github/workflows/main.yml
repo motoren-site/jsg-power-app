@@ -35,3 +35,5 @@ jobs:
     - name: Deploy to Kubernetes
       run: kubectl apply -f config/deployment.yml    
   
+    - name: Deploy Service
+      run: kubectl apply -f config/service.yml
