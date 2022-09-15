@@ -29,8 +29,8 @@ jobs:
         personalAccessToken: ${{ secrets.DIGITAL_OCEAN_TOKEN }}
         clusterName: k8s-miles
 
-    #- name: Update deployment file
-      #run: TAG=$(echo $GITHUB_SHA | head -c7) && sed -i 's|<IMAGE>|registry.digitalocean.com/olsen/jsg-power-app:'${TAG}'|' $GITHUB_WORKSPACE/config/deployment.yml
+    - name: Update deployment file
+      run: TAG=$(echo $GITHUB_SHA | head -c7) && sed -i 's|<IMAGE>|registry.digitalocean.com/olsen/jsg-power-app:'${TAG}'|' $GITHUB_WORKSPACE/config/deployment.yml
 
     - name: Deploy to Kubernetes
       run: kubectl apply -f config/deployment.yml    
